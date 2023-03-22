@@ -40,6 +40,6 @@ def about():
 def galery():
     """Renders the gallery page."""
     return dict(
-        title='ֳאככונויא',
+        title='Dab',
         year=datetime.now().year)
 
