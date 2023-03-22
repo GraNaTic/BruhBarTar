@@ -22,7 +22,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/home">Home</a></li>
+                    <li><a href="/home">Галлерея</a></li>
                     <li><a href="/about">О капибарах</a></li>
                     <li><a href="/contribution">Вклад в культуру</a></li>
                 </ul>
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="container body-content">
+    <div class="container body-content background">
         {{!base}}
         <hr />
         <footer>

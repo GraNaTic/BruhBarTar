@@ -2,6 +2,7 @@
 Routes and views for the bottle application.
 """
 
+from turtle import title
 from bottle import route, view
 from datetime import datetime
 
@@ -27,9 +28,11 @@ def contact():
 @route('/about')
 @view('about')
 def about():
-    """Renders the about page."""
+    """Renders the capibara info page."""
     return dict(
         title='About',
         message='Your application description page.',
         year=datetime.now().year
     )
+
+
