@@ -24,7 +24,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/home">Home</a></li>
                     <li><a href="/about">О капибарах</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/contribution">Вклад в культуру</a></li>
                 </ul>
             </div>
         </div>
