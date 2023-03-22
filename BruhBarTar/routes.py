@@ -35,11 +35,4 @@ def about():
         year=datetime.now().year
     )
 
-@route('/galery')
-@view('galery')
-def galery():
-    """Renders the gallery page."""
-    return dict(
-        title='Dab',
-        year=datetime.now().year)
 
