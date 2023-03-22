@@ -8,22 +8,34 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            Bottle gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://bottlepy.org/docs/dev/index.html">Learn more &raquo;</a></p>
+        <div class="thumbnail">
+          <img src="https://s14.stc.yc.kpcdn.net/share/i/12/12532654/de-1200.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Капибары из Ленинградского зоопарка переедут в открытый уличный вольер</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://www.spb.kp.ru/daily/27401.5/4597750/" class="btn btn-primary">Перейти к статье</a>
+                <a href="https://www.spb.kp.ru/daily/27401.5/4597750/" class="btn btn-primary">Перейти к статье</a>
+            </div>
+        </div>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
+        <div class="thumbnail">
+          <img src="https://s14.stc.yc.kpcdn.net/share/i/12/12532654/de-1200.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Капибары из Ленинградского зоопарка переедут в открытый уличный вольер</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://www.spb.kp.ru/daily/27401.5/4597750/" class="btn btn-primary">Перейти к статье</a>
+            </div>
+        </div>
     </div>
     <div class="col-md-4">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+        <div class="thumbnail">
+          <img src="https://s14.stc.yc.kpcdn.net/share/i/12/12532654/de-1200.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Капибары из Ленинградского зоопарка переедут в открытый уличный вольер</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://www.spb.kp.ru/daily/27401.5/4597750/" class="btn btn-primary">Перейти к статье</a>
+            </div>
+        </div>
     </div>
 </div>
