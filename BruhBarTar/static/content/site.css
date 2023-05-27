@@ -52,8 +52,39 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
-img {
-    border-radius: 20px;
-    border: 2px solid green;
-    box-shadow: 0 0 7px #666;
+.partner-card img {
+    max-width: 100%; /* Максимальная ширина картинки */
+    height: auto;
+}
+
+.partner-card {
+    padding: 10px;
+    width: 350px;
+    background-color: white;
+    margin: 10px;
+    box-shadow: 0 0 10px #000;
+    text-align: center;
+}
+.join {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partner-logo {
+    max-width: 100px;
+    align-items: center;
+}
+
+.h2 {
+    margin-bottom: 44px;
+}
+
+.partner-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#company {
+    text-align: center;
 }
