@@ -54,4 +54,9 @@ def companies():
         year=datetime.now().year
     )
 
+@route('/orders')
+def orders():
+    with open('orders.json') as file:
+        data = json.load(file)
+    return template('orders', orders=orders, title='Вклад капибар в культуру человека', year=datetime.now().year, data=data)
 

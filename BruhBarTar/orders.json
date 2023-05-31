@@ -1,0 +1,22 @@
+[
+  {
+    "product_name": "Капибара-плюшевая игрушка",
+    "price": 19.99,
+    "image_url": "https://ae04.alicdn.com/kf/S6c241129833c442c9781325af4d36359N.jpg_640x640.jpg"
+  },
+  {
+    "product_name": "Капибара-кружка",
+    "price": 14.99,
+    "image_url": "https://example.com/doll.jpg"
+  },
+  {
+    "product_name": "Капибара-магнит",
+    "price": 4.99,
+    "image_url": "https://example.com/magnet.jpg"
+  },
+  {
+    "product_name": "Капибара-футболка",
+    "price": 24.99,
+    "image_url": "https://example.com/tshirt.jpg"
+  }
+]

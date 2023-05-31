@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BruhBarTar</Name>
     <RootNamespace>BruhBarTar</RootNamespace>
-    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +33,9 @@
     <Compile Include="companies.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="orders.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +46,9 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="orders.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="partners.json" />
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
@@ -71,6 +77,9 @@
     <Content Include="views\contact.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
+    <Content Include="views\orders.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\partners.tpl" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +87,15 @@
       <Id>env1</Id>
       <Version>3.9</Version>
       <Description>env1 (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+    <Interpreter Include="env2\">
+      <Id>env2</Id>
+      <Version>3.7</Version>
+      <Description>env2 (Python 3.7 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
