@@ -37,8 +37,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
+    <Compile Include="unittests\test_validation_description.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="unittests\test_validation_url.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="unittests\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />

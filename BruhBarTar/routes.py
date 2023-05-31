@@ -6,6 +6,7 @@ from turtle import title
 from bottle import route, view, template
 from datetime import datetime
 import json
+import companies
 
 @route('/')
 @route('/home')
@@ -28,13 +29,12 @@ def contact():
 
 @route('/partners')
 @view('partners')
-def contact():
+def parteners():
         # Открываем файл JSON и считываем его содержимое
         with open('partners.json') as json_file:
             data = json.load(json_file)
-        title='Партнерские компании',
         year=datetime.now().year
-        return template('partners', title=title, year=year, data=data)
+        return template('partners', year=year, data=data, error='')
     
 
 @route('/about')
@@ -47,12 +47,6 @@ def about():
         year=datetime.now().year
     )
 
-@route('/companies', method = 'post')
-def companies():
-    return dict(
-        title='About',
-        year=datetime.now().year
-    )
 
 @route('/orders')
 def orders():

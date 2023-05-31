@@ -68,6 +68,7 @@ input[type="checkbox"].input-validation-error {
 .join {
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .partner-logo {
@@ -112,4 +113,9 @@ input[type="checkbox"].input-validation-error {
 .orders-logo {
     max-width: 100px;
     align-items: center;
+}
+}
+#cmp {
+    display:flex;
+    justify-content:center;
 }
