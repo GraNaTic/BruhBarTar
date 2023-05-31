@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title=title, year=year)
+% rebase('layout.tpl', title='Партнеры', year=year, error=error)
 
 <h1 id="company">Наши партнеры</h1>
   
@@ -14,6 +14,7 @@
       % end
     </div>
 </div>
+<div id="cmp">
 <div class="join">
   <h3> Стать партнером </h3>
     <form action="/companies" method="post">
@@ -21,6 +22,8 @@
         <p><input type="text" size="50" name="ADDRESS" placeholder="Официальный электронный адрес"></p>
         <p><textarea rows="2" cols="50" name="DES" placeholder="Вставьте описание компании для сайта"></textarea></p> 
         <p><textarea rows="2" cols="50" name="IMG" placeholder="Вставьте ссылку на логотип"></textarea></p>
-        <p><input class="btn btn-default" type="submit" value="Send"></p>
+        <p><span style="color:red;">{{error}}</span></p>
+        <p><input class="btn btn-default" type="submit" value="Отправить"></p>
     </form>
+</div>
 </div>
