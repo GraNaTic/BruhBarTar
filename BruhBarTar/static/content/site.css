@@ -22,9 +22,8 @@ body {
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
-select,
-textarea {
-    max-width: 280px;
+select {
+    max-width: 350px;
 }
 
 /* styles for validation helpers */
@@ -53,7 +52,7 @@ input[type="checkbox"].input-validation-error {
 }
 
 .partner-card img {
-    max-width: 100%; /* Максимальная ширина картинки */
+    max-width: 40%; /* Максимальная ширина картинки */
     height: auto;
 }
 
@@ -92,4 +91,9 @@ input[type="checkbox"].input-validation-error {
 #cmp {
     display:flex;
     justify-content:center;
+}
+.join textarea{
+    height:140px;
+    width: 350px;
+    resize:none;
 }

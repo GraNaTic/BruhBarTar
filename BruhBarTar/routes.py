@@ -31,7 +31,7 @@ def contact():
 @view('partners')
 def parteners():
         # Открываем файл JSON и считываем его содержимое
-        with open('partners.json') as json_file:
+        with open('partners.json', 'r', encoding='utf-8') as json_file:
             data = json.load(json_file)
         year=datetime.now().year
         return template('partners', year=year, data=data, error='')
