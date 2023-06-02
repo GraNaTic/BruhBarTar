@@ -53,11 +53,8 @@ def my_form():
     descr = request.forms.getunicode('DES')
     url = request.forms.getunicode('IMG')
     error = None
-    c = 0
     with open('partners.json','r', encoding='utf-8') as json_file:
             data = json.load(json_file)
-    if any(item.get(email) and item[email]["name"] == name for item in data.values()):
-        error = "Компания с такой почтой и названием уже существует!"
     if not email_check(email):
         error = "Некорректный формат почты!"
     elif email.strip() == '' or name.strip() == '' or descr.strip() == '' or url.strip() == '':
@@ -68,39 +65,25 @@ def my_form():
         error = "Некорректно введено название компании!"
     elif not validate_logo_url(url):
         error = "Некорректная ссылка на логотип!"
-    if email in data:
-        companies = data[email]
-        for company in companies:
-            if company['name'] == company_name:
-                error = "Данная компания уже является нашим партнером"
-                break
-        else:
-            c=1
+    elif email in data:
+        error = "Данная компания уже является нашим партнером"
+
             
 
     if error:
         year=datetime.now().year
         return template('partners.tpl', error=error, year=year, data = data)
     else:
-        if (c==1):
-            new_partner = {
+        new_partner = {
+            email: {
                 "name": name,
                 "logo": url,
                 "description": descr,
                 "partnershipDate": datetime.now().year
             }
-            companies.append(new_partner)
-        else:
-            new_partner = {
-                email: {
-                    "name": name,
-                    "logo": url,
-                    "description": descr,
-                    "partnershipDate": datetime.now().year
-                }
-            }
+        }
         data.update(new_partner)
         with open('partners.json', 'w', encoding='utf-8') as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)
-        return f"Спасибо, {name}! Ваша компания добавлена на сайт, мы свяжемся с вами касательно партнерства по вашей почте {email}."
+    return f"Спасибо, {name}! Ваша компания добавлена на сайт, мы свяжемся с вами касательно партнерства по вашей почте {email}."
 
