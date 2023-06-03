@@ -7,6 +7,7 @@ from bottle import route, view, template
 from datetime import datetime
 import json
 import companies
+import orders
 
 @route('/')
 @route('/home')
@@ -47,10 +48,9 @@ def about():
         year=datetime.now().year
     )
 
-
 @route('/orders')
 def orders():
     with open('orders.json') as file:
         data = json.load(file)
-    return template('orders', orders=orders, title='Вклад капибар в культуру человека', year=datetime.now().year, data=data)
+    return template('orders', title='Вклад капибар в культуру человека', year=datetime.now().year, data=data, select_product=None)
 
