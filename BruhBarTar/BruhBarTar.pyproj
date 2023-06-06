@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BruhBarTar</Name>
     <RootNamespace>BruhBarTar</RootNamespace>
-    <InterpreterId>MSBuild|env3|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env4|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>unittest</TestFramework>
     <UnitTestPattern>test*.py</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>
@@ -36,7 +36,14 @@
     <Compile Include="companies.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="orders.py" />
     <Compile Include="routes.py" />
+    <Compile Include="test_phone.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_validation_address_orders.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_validation_description.py">
       <SubType>Code</SubType>
     </Compile>
@@ -98,6 +105,15 @@
       <Id>env3</Id>
       <Version>3.7</Version>
       <Description>env3 (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+    <Interpreter Include="env4\">
+      <Id>env4</Id>
+      <Version>3.11</Version>
+      <Description>env4 (Python 3.11 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
