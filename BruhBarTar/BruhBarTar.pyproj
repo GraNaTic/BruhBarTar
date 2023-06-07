@@ -18,9 +18,9 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BruhBarTar</Name>
     <RootNamespace>BruhBarTar</RootNamespace>
-    <InterpreterId>MSBuild|env4|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env3|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>unittest</TestFramework>
-    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestPattern>test*</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -34,6 +34,9 @@
   <ItemGroup>
     <Compile Include="app.py" />
     <Compile Include="companies.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grisha.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="orders.py" />
@@ -71,6 +74,7 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
+    <Content Include="static\scripts\Grisha.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="static\scripts\jquery-1.10.2.js" />
     <Content Include="static\scripts\jquery-1.10.2.min.js" />

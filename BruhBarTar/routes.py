@@ -8,6 +8,8 @@ from datetime import datetime
 import json
 import companies
 import orders
+import Grisha
+import os
 
 @route('/')
 @route('/home')
@@ -52,10 +54,16 @@ def about():
 @view('reviews')
 def reviews():
     """Renders the reviews page."""
-    return dict(
-        title='Отзывы',
-        year=datetime.now().year
-    )
+    content = ""
+    
+    if os.path.isfile('C:\\Users\\Grisha\\source\\repos\\BruhBarTar\\BruhBarTar\\reviews.json'):
+        with open('reviews.json', 'r', encoding='utf-8') as file:
+            data = json.load(file)  
+        for key in data:
+            for arr in data[key]:
+                content+="<div class = \"cardReview\"><h3>"+key+"</h3><p>"+arr[1]+"</p><p class=\"reviewText\">"+arr[0]+"</p></div>"
+    return template('reviews', title = "Отзывы", year=datetime.now().year, error = '', cont = content)
+
 @route('/orders')
 def orders():
     with open('orders.json') as file:

@@ -144,3 +144,20 @@ img {
     width: 350px;
     resize:none;
 }
+
+.cardReview {
+    border: groove;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    background-color: white;
+}
+
+.reviewText {
+    width: fit-content;
+    font-size: 22px;
+    background-color: #ffd00075;
+}
+
+.cardReview h3{
+    margin: 0px;
+}
