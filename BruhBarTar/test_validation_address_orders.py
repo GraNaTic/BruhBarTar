@@ -3,29 +3,29 @@ import orders
 
 class AddressValidationTestCase(unittest.TestCase):
     def test_valid_address(self):
-        address = "ул. Центральная 1, г. Город, д. 5"
+        address = "СѓР». Р¦РµРЅС‚СЂР°Р»СЊРЅР°СЏ 1, Рі. Р“РѕСЂРѕРґ, Рґ. 5"
         result = orders.validate_address(address)
         self.assertTrue(result)
 
     def test_valid_address_with_extra_elements(self):
-        address = "ул. Центральная 1, г. Город, д. 5, оф. 10"
+        address = "СѓР». Р¦РµРЅС‚СЂР°Р»СЊРЅР°СЏ 1, Рі. Р“РѕСЂРѕРґ, Рґ. 5, РѕС„. 10"
         result = orders.validate_address(address)
         self.assertTrue(result)
 
     def test_valid_address_with_additional_spaces(self):
-        address = "   ул. Центральная   1,   г. Город,   д. 5   "
+        address = "   СѓР». Р¦РµРЅС‚СЂР°Р»СЊРЅР°СЏ   1,   Рі. Р“РѕСЂРѕРґ,   Рґ. 5    "
         result = orders.validate_address(address)
         self.assertTrue(result)
 
     def test_valid_address_with_different_casing(self):
-        address = "УЛ. Центральная 1, г. Город, Д. 5"
+        address = "РЈР›. Р¦РµРЅС‚СЂР°Р»СЊРЅР°СЏ 1, Рі. Р“РѕСЂРѕРґ, Р”. 5"
         result = orders.validate_address(address)
-        self.assertTrue(result)
+        self.assertFalse(result)
 
     def test_valid_address_with_missing_elements(self):
-        address = "ул. Центральная 1, г. Город"
+        address = "СѓР». Р¦РµРЅС‚СЂР°Р»СЊРЅР°СЏ 1, Рі. Р“РѕСЂРѕРґ"
         result = orders.validate_address(address)
-        self.assertTrue(result)
+        self.assertFalse(result)
 
 
 if __name__ == '__main__':

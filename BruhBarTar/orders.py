@@ -1,17 +1,59 @@
 from bottle import route, template, post, request
 from datetime import datetime
 import json
+import re
 
 @route('/add_product', method='post')
 def add_product():
     with open('orders.json') as file:
         data = json.load(file)
+    with open('orders_history.json') as file:
+        history = json.load(file)
     select_product = request.forms.getunicode("product_name")
-    return template('orders', title='Вклад капибар в культуру человека', year=datetime.now().year, data=data, select_product=select_product, error=None)
+    return template('orders', title='Вклад капибар в культуру человека', year=datetime.now().year, data=data, select_product=select_product, error=None, history=history)
 
 @route('/buy', method='post')
 def buy():
-    return template('orders', title='Вклад капибар в культуру человека', year=datetime.now().year, data=data, select_product=None, error=None)
+    error=None
+    with open('orders.json') as file:
+        data = json.load(file)
+    with open('orders_history.json') as file:
+        history = json.load(file)
+    select_product=request.forms.getunicode("product_name")
+    email=request.forms.getunicode("EMAIL")
+    name=request.forms.getunicode("NAME")
+    address=request.forms.getunicode("ADDRESS")
+    phone=request.forms.getunicode("PHONE")
+    if not validate_email(email):
+        error = "Неверно введена почта!"
+    elif email.strip() == '' or name.strip() == '' or name.strip() == '' or address.strip() == '':
+        error = "Заполните все поля!"
+    elif not validate_name(name):
+        error = "Некорректно введено имя!"
+    elif not validate_address(address):
+        error = "Некорректно введен адрес!"
+    elif not validate_phone(phone):
+        error = "Некорректно введен телефон!"
+    if error is None:
+        # Создаем новый словарь с данными для новой записи
+        new_record = {
+            "product_name": select_product,
+            "name": name,
+            "address": address,
+            "phone": phone,
+            "email": email,
+            "date": str(datetime.today().date())
+        }
+        
+        # Добавляем новую запись в список данных
+        history.append(new_record)
+        
+        # Открываем файл на запись и записываем обновленные данные
+        with open('orders_history.json', 'w') as f:
+            json.dump(history, f)
+        return template('orders', title='Вклад капибар в культуру человека', year=datetime.now().year, data=data, select_product=None, error=error, history=history)
+    elif error is not None:
+        return template('orders', title='Вклад капибар в культуру человека', year=datetime.now().year, data=data, select_product=select_product, error=error, history=history)
 
 def validate_email(email):
     # Шаблон регулярного выражения для проверки формата адреса электронной почты

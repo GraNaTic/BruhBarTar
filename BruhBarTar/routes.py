@@ -52,5 +52,7 @@ def about():
 def orders():
     with open('orders.json') as file:
         data = json.load(file)
-    return template('orders', title='Вклад капибар в культуру человека', year=datetime.now().year, data=data, select_product=None)
+    with open('orders_history.json') as file:
+        history = json.load(file)
+    return template('orders', title='Вклад капибар в культуру человека', year=datetime.now().year, data=data, history=history, select_product=None)
 
