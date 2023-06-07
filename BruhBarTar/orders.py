@@ -33,9 +33,8 @@ def buy():
     elif not validate_address(address):
         error = "Некорректно введен адрес!"
     elif not validate_phone(phone):
-        error = "Некорректно введен телефон!"
+        error = "Некорректно введен телефон! Пример: +79234562347"
     if error is None:
-        # Создаем новый словарь с данными для новой записи
         new_record = {
             "product_name": select_product,
             "name": name,
@@ -45,7 +44,6 @@ def buy():
             "date": str(datetime.today().date())
         }
         
-        # Добавляем новую запись в список данных
         history.append(new_record)
         
         # Открываем файл на запись и записываем обновленные данные
@@ -86,13 +84,8 @@ def validate_phone(phone):
 
 
 def validate_address(address):
-    # Проверяем, содержит ли адрес хотя бы одно непустое значение
-    if not address.strip():
-        return False  # Адрес пустой
-    # Проверяем формат адреса
-
-    # В данном примере мы просто проверяем наличие ключевых элементов в адресе
-    required_elements = ["ул.", "г.", "д."]
+    # Проверка наличия ключевых элементов в адресе
+    required_elements = ["ул.", "г.", "д.", "кв."]
     for element in required_elements:
         if element not in address:
             return False  # Отсутствует обязательный элемент в адресе
