@@ -67,6 +67,7 @@
     <Content Include="views\contact.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
+    <Content Include="views\reviews.tpl" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env1\">

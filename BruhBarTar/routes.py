@@ -2,7 +2,6 @@
 Routes and views for the bottle application.
 """
 
-from turtle import title
 from bottle import route, view
 from datetime import datetime
 
@@ -35,4 +34,12 @@ def about():
         year=datetime.now().year
     )
 
+@route('/reviews')
+@view('reviews')
+def reviews():
+    """Renders the reviews page."""
+    return dict(
+        title='Отзывы',
+        year=datetime.now().year
+    )
 
