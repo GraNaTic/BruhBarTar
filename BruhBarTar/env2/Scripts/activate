@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\user1.STDM2\source\repos\BruhBarTar\BruhBarTar\env2"
+VIRTUAL_ENV="C:\Users\user1.STDM2\Source\Repos\BruhBarTar\BruhBarTar\env2"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

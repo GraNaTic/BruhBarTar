@@ -1,0 +1,38 @@
+{
+    "tinkoff@example.com": {
+        "name": "Тинькофф Банк",
+        "logo": "https://www.stenka24.ru/wp-content/uploads/2019/12/tinkoff-logo.png",
+        "description": "Российский коммерческий банк, сфокусированный полностью на дистанционном обслуживании, не имеющий розничных отделений. Крупнейший в мире онлайн-банк по количеству клиентов.",
+        "partnershipDate": "2023"
+    },
+    "rzd@example.com": {
+        "name": "Российские железные дороги",
+        "logo": "https://trans-mtk.com/images/logo/RZD_logo_sm_pos_p.jpg.webp",
+        "description": "Российская государственная вертикально интегрированная компания, владелец инфраструктуры общего пользования и крупнейший перевозчик российской сети железных дорог.",
+        "partnershipDate": "2022"
+    },
+    "nationalgeography@example.com": {
+        "name": "National Geographic",
+        "logo": "https://logos-marcas.com/wp-content/uploads/2020/09/National-Geographic-Channel-Logotipo-1997-2001.jpg",
+        "description": "Официальное издание Национального географического общества США, основанное в октябре 1888 года. Журнал издаётся в нескольких странах и на разных языках. С 2014 года главный редактор - Сьюзен Голдберг.",
+        "partnershipDate": "2022"
+    },
+    "greenpeace@example.com": {
+        "name": "Green Peace",
+        "logo": "https://1000logos.net/wp-content/uploads/2021/04/Greenpeace-logo-2048x1152.png",
+        "description": "Международная неправительственная экологическая организация. В поле зрения организации находятся такие проблемы, как глобальное изменение климата, сокращение площади лесов от тропиков до Арктики и Антарктики, чрезмерный вылов рыбы, коммерческий китобойный промысел, радиационная опасность.",
+        "partnershipDate": "2021"
+    },
+    "mars@example.com": {
+        "name": "Марс",
+        "logo": "https://s3.us-east-1.amazonaws.com/project44-production/logos/Mars-logo.png",
+        "description": "Производитель пищевых продуктов длительного хранения, наиболее известная по шоколадным батончикам, также производит корма для домашних животных.",
+        "partnershipDate": "2022"
+    },
+    "sber@example.com": {
+        "name": "Сбер",
+        "logo": "https://avatars.mds.yandex.net/i?id=ce992d26bfd0833d31c98b2f8f4193f6c30a8cba-8175999-images-thumbs&n=13",
+        "description": "Российский финансовый конгломерат, крупнейший универсальный банк России и Восточной Европы.",
+        "partnershipDate": "2020"
+    }
+}

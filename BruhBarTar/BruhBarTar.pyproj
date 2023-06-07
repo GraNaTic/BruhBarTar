@@ -18,7 +18,10 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BruhBarTar</Name>
     <RootNamespace>BruhBarTar</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env4|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,7 +33,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="companies.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="orders.py" />
     <Compile Include="routes.py" />
+    <Compile Include="test_phone.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_validation_address_orders.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_validation_description.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_validation_url.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
@@ -40,6 +59,8 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="orders.json" />
+    <Content Include="partners.json" />
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
@@ -67,6 +88,8 @@
     <Content Include="views\contact.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
+    <Content Include="views\orders.tpl" />
+    <Content Include="views\partners.tpl" />
     <Content Include="views\reviews.tpl" />
   </ItemGroup>
   <ItemGroup>
@@ -79,10 +102,19 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
-    <Interpreter Include="env2\">
-      <Id>env2</Id>
+    <Interpreter Include="env3\">
+      <Id>env3</Id>
       <Version>3.7</Version>
-      <Description>env2 (Python 3.7 (64-bit))</Description>
+      <Description>env3 (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+    <Interpreter Include="env4\">
+      <Id>env4</Id>
+      <Version>3.11</Version>
+      <Description>env4 (Python 3.11 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>

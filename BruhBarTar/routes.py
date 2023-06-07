@@ -2,8 +2,12 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view
+from turtle import title
+from bottle import route, view, template
 from datetime import datetime
+import json
+import companies
+import orders
 
 @route('/')
 @route('/home')
@@ -24,6 +28,16 @@ def contact():
         year=datetime.now().year
     )
 
+@route('/partners')
+@view('partners')
+def parteners():
+        # Открываем файл JSON и считываем его содержимое
+        with open('partners.json', 'r', encoding='utf-8') as json_file:
+            data = json.load(json_file)
+        year=datetime.now().year
+        return template('partners', year=year, data=data, error='')
+    
+
 @route('/about')
 @view('about')
 def about():
@@ -42,4 +56,9 @@ def reviews():
         title='Отзывы',
         year=datetime.now().year
     )
+@route('/orders')
+def orders():
+    with open('orders.json') as file:
+        data = json.load(file)
+    return template('orders', title='Вклад капибар в культуру человека', year=datetime.now().year, data=data, select_product=None)
 

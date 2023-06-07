@@ -25,6 +25,8 @@
                     <li><a href="/home">Галлерея</a></li>
                     <li><a href="/about">О капибарах</a></li>
                     <li><a href="/contribution">Вклад в культуру</a></li>
+                    <li><a href="/partners">Партнерские компании</a></li>
+                    <li><a href="/orders">Оформленные заказы</a></li>
                     <li><a href="/reviews">Отзывы</a></li>
                 </ul>
             </div>
