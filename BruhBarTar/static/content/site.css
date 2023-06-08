@@ -145,6 +145,42 @@ img {
     resize:none;
 }
 
+.result {
+    max-height: 300px;
+    overflow: auto;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+    .result table {
+        /*border-collapse: collapse;*/
+        width: 100%;
+    }
+
+    .result thead {
+        position: sticky;
+        top: 0;
+        background-color: orange;
+        border: 1px solid #602939;
+    }
+
+    .result th {
+        border: 1px solid #602939;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .result td {
+        border: 1px solid #602939;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .result tbody {
+        background-color: #fafde899;
+    }
+}
+
 .cardReview {
     border: groove;
     margin: 10px 0 10px 0;
