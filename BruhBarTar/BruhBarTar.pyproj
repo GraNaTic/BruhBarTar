@@ -41,6 +41,12 @@
     </Compile>
     <Compile Include="orders.py" />
     <Compile Include="routes.py" />
+    <Compile Include="test_date.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_login.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_phone.py">
       <SubType>Code</SubType>
     </Compile>
@@ -65,6 +71,7 @@
     <Content Include="orders.json" />
     <Content Include="partners.json" />
     <Content Include="requirements.txt" />
+    <Content Include="reviews.json" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\site.css" />
